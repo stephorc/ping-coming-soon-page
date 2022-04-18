@@ -7,10 +7,17 @@
 html { font-size: 62.5%; }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   font-size: 2rem;
   font-family: 'Libre Franklin', sans-serif;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: 'logo'
+                      'announcement'
+                      'form'
+                      'image'
+                      'footer';
 }
 
 h1,
@@ -19,19 +26,168 @@ p {
   padding: 0;
 }
 
+header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.3em 2em;
+  position: relative;
+  text-align: center;
+}
+
 
 /* ----------Main Page Layout---------- */
 
+.logo {
+  grid-area: logo;
+}
+.announcement {
+  grid-area: announcement;
+}
+.form {
+  grid-area: form;
+}
+.image {
+  grid-area: image;
+}
+footer {
+  grid-area: footer;
+}
+
+article {
+  padding-top: 1em;
+}
+
+
+/* ----------Header---------- */
+
+.logo {
+  padding: 2em 0 .3em 0;
+}
+.logo img {
+  width: 70%;
+}
+
+
+/* ----------Main .announcement---------- */
+
+.announcement h1 {
+  font-weight: 300;
+  font-size: 2.3rem;
+  color: hsl(0, 0%, 59%);
+}
+.announcement span {
+  font-weight: 700;
+  color: #000;
+}
+.announcement p {
+  margin-top: 1em;
+  font-size: 1.3rem;
+}
+
+
+/* ----------Main .form---------- */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+.form input {
+  border-radius: 2.2rem;
+  border: .1rem solid hsl(223, 100%, 88%);
+  padding: .9em 3em;
+  width: 27em;
+  margin-bottom: .7em;
+}
+.form input::placeholder {
+  color: hsl(223, 100%, 88%);
+}
+.form button {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.3rem;
+  background-color: hsl(223, 87%, 63%);
+  border-radius: 2.2rem;
+  border: .1rem solid hsl(223, 87%, 63%);
+  padding: .9em 11.3em;
+}
+
+
+/* ----------Main .image---------- */
+
+.image img {
+  width: 100%;
+}
+
+
+/* ----------Main .attribution---------- */
+
+.attribution {
+  display: inline;
+  font-size: 1.3rem;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: 0;
+  top: 50vh;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-weight: 600;
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: hsl(228, 72%, 62%);
+  text-decoration: underline;
+}
+
+
 /* ----------Footer---------- */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.site-soc {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+}
+.socials .fa-brands {
+  color: hsl(223, 87%, 63%);
+  border: .1rem solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+  font-size: .7em;
+  padding: .5em .7em;
+  margin-left: .5em;
+}
 
+.copy {
+  color: hsl(0, 0%, 59%);
+  opacity: .5;
+  font-size: 1.2rem;
+  margin-top: .7em;
+}
 
 /* ----------Media Queries---------- */
 
-@media (max-width: 375px) {
-  footer .attribution {
+@media (max-width: 768px) {
+  .attribution {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 2em auto;
+    grid-template-areas: '. logo .'
+                        '. announcement .'
+                        '. form .'
+                        '. image .'
+                        '. footer .';
+  }
+  .image img {
+    padding: 4em;
   }
 }

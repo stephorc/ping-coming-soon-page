@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Steph O.">
-  <meta name="description" content="This webpage is my (html/css) solution to Frontend Mentor's Testimonials Grid Section Challenge.">
-      
-  <title>Frontend Mentor | Ping coming soon page</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Steph O.">
+    <meta name="description" content="This webpage is my (html/css) solution to Frontend Mentor's Testimonials Grid Section Challenge.">
+        
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Flavicon & External Sheet -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+    <!-- Flavicon & External Sheet -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="images/logo.svg" alt="Ping.">
-    </div>
-  </header>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="images/logo.svg" alt="Ping.">
+      </div>
+    </header>
 
-  <main>
-    <article>
-      <h1>We are launching <span>soon!</span></h1>
-      <p class="small-title-txt">Subscribe and get notified</p>
-    </article>
-    <article>
-      <p id="form">
-        <input type="email" name="email" id="email" />
-        <div id="error"></div>
-        <button type="submit" onclick="validateEmail()">Notify Me</button>
+    <main>
+      <article class="announcement">
+        <h1>We are launching <span>soon!</span></h1>
+        <p class="small-title-txt">Subscribe and get notified</p>
+      </article>
+      <article class="form">
+        <p id="form">
+          <input type="email" name="email" id="email" placeholder="Your email address..." />
+          <div id="error"></div>
+          <button type="submit" onclick="validateEmail()">Notify Me</button>
+        </p>
+      </article>
+      <article class="image">
+        <img src="images/illustration-dashboard.png" alt="dashboard illustration">
+      </article>
+      <article class="attribution">
+        <p>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="https://github.com/stephorc/testimonials-grid-section" target="_blank">Steph O.</a>
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="site-soc">
+        <div class="socials">
+          <i class="fa-brands fa-facebook-f"></i>
+        </div>
+        <div class="socials">
+          <i class="fa-brands fa-twitter"></i>
+        </div>
+        <div class="socials">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div> 
+      <p class="copy">
+        &copy; Copyright Ping. All rights reserved.
       </p>
-    </article>
-    <article>
-      <img src="images/illustration-dashboard.png" alt="dashboard illustration">
-    </article>
-  </main>
-
-  <footer>
-    <div class="socials">
-      <i class="fa-brands fa-facebook-f"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-instagram"></i>
-    </div>
-    <p>
-      &copy; Copyright Ping. All rights reserved.
-    </p>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/stephorc/testimonials-grid-section" target="_blank">Steph O.</a>
-    </p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
