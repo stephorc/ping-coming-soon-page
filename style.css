@@ -20,9 +20,18 @@ p {
 }
 
 
-/* ----------Main Page Layout & Colors---------- */
+/* ----------Main Page Layout---------- */
 
 /* ----------Footer---------- */
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* ----------Media Queries---------- */
+
+@media (max-width: 375px) {
+  footer .attribution {
+    display: none;
+  }
+}

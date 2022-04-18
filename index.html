@@ -21,16 +21,38 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Ping.">
+    </div>
+  </header>
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+  <main>
+    <article>
+      <h1>We are launching <span>soon!</span></h1>
+      <p class="small-title-txt">Subscribe and get notified</p>
+    </article>
+    <article>
+      <p id="form">
+        <input type="email" name="email" id="email" />
+        <div id="error"></div>
+        <button type="submit" onclick="validateEmail()">Notify Me</button>
+      </p>
+    </article>
+    <article>
+      <img src="images/illustration-dashboard.png" alt="dashboard illustration">
+    </article>
+  </main>
 
   <footer>
+    <div class="socials">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    <p>
+      &copy; Copyright Ping. All rights reserved.
+    </p>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://github.com/stephorc/testimonials-grid-section" target="_blank">Steph O.</a>
