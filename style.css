@@ -117,9 +117,15 @@ main { margin: .5em 2em; }
   color: hsl(223, 100%, 88%);
   font-family: 'Libre Franklin', sans-serif;
 }
-.form #error {
+.form input .error {
   color: hsl(354, 100%, 66%);
   font-size: 1.3rem;
+  margin: 0 auto;
+}
+.form input .success {
+  color: hsl(223, 100%, 66%);
+  font-size: 1.3rem;
+  margin: 0 auto;
 }
 .form button {
   color: #fff;
@@ -135,6 +141,9 @@ main { margin: .5em 2em; }
 }
 .form button:hover {
   background-color: hsl(223, 100%, 66%);
+}
+.form button:active {
+  opacity: .5;
 }
 
 
@@ -185,6 +194,7 @@ footer { margin: 1.3em 2em; }
   border-radius: 50%;
   font-size: .7em;
   margin-left: .5em;
+  cursor: pointer;
   transition: all .2s ease-in-out;
 }
 .socials:nth-of-type(1) .fa-brands {
@@ -239,6 +249,7 @@ footer { margin: 1.3em 2em; }
   }
   .form input {
     margin-bottom: 0;
+    margin-right: 1em;
     width: 27em;
   }
   .form button {
@@ -255,9 +266,6 @@ footer { margin: 1.3em 2em; }
 @media (min-width: 1024px) {
   .grid {
     padding: 0 6em;
-  }
-  .attribution {
-    top: 20em;
   }
 }
 
@@ -280,13 +288,11 @@ footer { margin: 1.3em 2em; }
   .form {
     flex-direction: row;
     justify-content: center;
-    gap: .5em;
     margin-top: 1em;
   }
   .form input {
-    margin-bottom: 0;
     padding: 1.2em 3em;
-    width: 37em;
+    width: 35em;
   }
   .form button {
     padding: 1.2em 0;
