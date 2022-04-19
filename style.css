@@ -7,17 +7,10 @@
 html { font-size: 62.5%; }
 
 body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   font-size: 2rem;
   font-family: 'Libre Franklin', sans-serif;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-areas: 'logo'
-                      'announcement'
-                      'form'
-                      'image'
-                      'footer';
 }
 
 h1,
@@ -26,13 +19,23 @@ p {
   padding: 0;
 }
 
+.grid {
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: 'logo'
+                      'announcement'
+                      'form'
+                      'image'
+                      'footer';
+  position: relative;
+}
+
 header,
 main,
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.3em 2em;
   position: relative;
   text-align: center;
 }
@@ -63,8 +66,10 @@ article {
 
 /* ----------Header---------- */
 
+header { margin: 1.5em 2em 0 2em; }
+
 .logo {
-  padding: 2em 0 .3em 0;
+  padding: 3em 0 0 0;
 }
 .logo img {
   width: 70%;
@@ -72,6 +77,8 @@ article {
 
 
 /* ----------Main .announcement---------- */
+
+main { margin: .5em 2em; }
 
 .announcement h1 {
   font-weight: 300;
@@ -83,7 +90,7 @@ article {
   color: #000;
 }
 .announcement p {
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-size: 1.3rem;
 }
 
@@ -94,17 +101,25 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1em 0;
+  margin: .5em 0 1.5em 0;
 }
 .form input {
   border-radius: 2.2rem;
   border: .1rem solid hsl(223, 100%, 88%);
   padding: .9em 3em;
-  width: 27em;
   margin-bottom: .7em;
+}
+.form input,
+.form button {
+  width: 20em;
 }
 .form input::placeholder {
   color: hsl(223, 100%, 88%);
+  font-family: 'Libre Franklin', sans-serif;
+}
+.form #error {
+  color: hsl(354, 100%, 66%);
+  font-size: 1.3rem;
 }
 .form button {
   color: #fff;
@@ -113,12 +128,21 @@ article {
   background-color: hsl(223, 87%, 63%);
   border-radius: 2.2rem;
   border: .1rem solid hsl(223, 87%, 63%);
-  padding: .9em 11.3em;
+  box-shadow: .6rem .6rem 1rem rgba(113, 124, 151, 0.4);
+  padding: .9em 0;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+.form button:hover {
+  background-color: hsl(223, 100%, 66%);
 }
 
 
 /* ----------Main .image---------- */
 
+.image {
+  margin-top: 1em;
+}
 .image img {
   width: 100%;
 }
@@ -127,27 +151,28 @@ article {
 /* ----------Main .attribution---------- */
 
 .attribution {
-  display: inline;
   font-size: 1.3rem;
   text-align: center;
   z-index: 2;
   position: absolute;
   writing-mode: vertical-lr;
   right: 0;
-  top: 50vh;
+  top: 21.4em;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(133, 34%, 51%);
   font-weight: 600;
   text-decoration: none;
 }
 .attribution a:hover {
-  color: hsl(228, 72%, 62%);
+  color: hsl(133, 56%, 65%);
   text-decoration: underline;
 }
 
 
 /* ----------Footer---------- */
+
+footer { margin: 1.3em 2em; }
 
 .site-soc {
   margin-top: 2em;
@@ -156,11 +181,25 @@ article {
 }
 .socials .fa-brands {
   color: hsl(223, 87%, 63%);
-  border: .1rem solid hsl(223, 100%, 88%);
+  border: .1rem solid hsla(0, 0%, 59%, 0.2);
   border-radius: 50%;
   font-size: .7em;
-  padding: .5em .7em;
   margin-left: .5em;
+  transition: all .2s ease-in-out;
+}
+.socials:nth-of-type(1) .fa-brands {
+  padding: .5em .7em;
+}
+.socials:nth-of-type(2) .fa-brands {
+  padding: .5em .5em;
+}
+.socials:nth-of-type(3) .fa-brands {
+  padding: .5em .6em;
+}
+.socials .fa-brands:hover {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(223, 87%, 63%);
+  border: .1rem solid hsl(223, 87%, 63%);
 }
 
 .copy {
@@ -170,24 +209,96 @@ article {
   margin-top: .7em;
 }
 
+
 /* ----------Media Queries---------- */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .attribution {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  body {
+  .grid {
     margin: 2em auto;
-    grid-template-areas: '. logo .'
-                        '. announcement .'
-                        '. form .'
-                        '. image .'
-                        '. footer .';
+  }
+  .logo img {
+    width: 100%;
+  }
+  main {
+    margin: 0 2em;
   }
   .image img {
-    padding: 4em;
+    padding: 0 2em;
+  }
+  .form {
+    flex-direction: row;
+    justify-content: center;
+    gap: .5em;
+    margin-top: 1em;
+  }
+  .form input {
+    margin-bottom: 0;
+    width: 27em;
+  }
+  .form button {
+    width: 10em;
+  }
+  .attribution {
+    top: 20em;
+  }
+  .socials .fa-brands {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    padding: 0 6em;
+  }
+  .attribution {
+    top: 20em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .grid {
+    padding: 0 10em;
+  }
+  .logo img {
+    width: 100%;
+  }
+  main {
+    margin: 0 2em;
+  }
+  .announcement h1 {
+    font-size: 5rem;
+  }
+  .announcement p {
+    font-size: 2rem;
+  }
+  .form {
+    flex-direction: row;
+    justify-content: center;
+    gap: .5em;
+    margin-top: 1em;
+  }
+  .form input {
+    margin-bottom: 0;
+    padding: 1.2em 3em;
+    width: 37em;
+  }
+  .form button {
+    padding: 1.2em 0;
+    width: 15em;
+  }
+  .image img {
+    padding: 0 6em;
+  }
+  .attribution {
+    top: 28em;
+  }
+  .socials .fa-brands {
+    font-size: 1.1em;
   }
 }
