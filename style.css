@@ -162,6 +162,8 @@ main { margin: .5em 2em; }
 .attribution {
   font-size: 1.3rem;
   text-align: center;
+  min-height: 26rem;
+  padding-bottom: 1em;
   z-index: 2;
   position: absolute;
   writing-mode: vertical-lr;
@@ -255,9 +257,6 @@ footer { margin: 1.3em 2em; }
   .form button {
     width: 10em;
   }
-  .attribution {
-    top: 20em;
-  }
   .socials .fa-brands {
     font-size: 1em;
   }
@@ -302,7 +301,7 @@ footer { margin: 1.3em 2em; }
     padding: 0 6em;
   }
   .attribution {
-    top: 28em;
+    padding-top: 6.6em;
   }
   .socials .fa-brands {
     font-size: 1.1em;

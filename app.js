@@ -45,6 +45,20 @@ const validateInputs = () => {
   }
 }
 
+function validateEmail() {
+  let addDiv = document.createElement('div');
+  addDiv.innerText = 'Yo.'
+
+  let susDiv = document.createElement('div');
+  susDiv.innerText = 'oh nooo'
+
+  if (email.value === '') {
+    form.appendChild(addDiv);
+  } else {
+    form.appendChild(susDiv);
+  }
+}
+
 // function validateEmail() {
 //   validateInputs();
 //  }
