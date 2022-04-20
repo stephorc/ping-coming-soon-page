@@ -1,4 +1,9 @@
 /* ----------Common Styles---------- */
+:root {
+  --error-color: hsl(354, 100%, 66%);
+  --success-color: hsl(145, 100%, 44%);
+  --warning-color: hsl(61, 100%, 44%);
+}
 
 *,
 *::before,
@@ -109,23 +114,28 @@ main { margin: .5em 2em; }
   padding: .9em 3em;
   margin-bottom: .7em;
 }
-.form input,
-.form button {
-  width: 20em;
+.form input:focus {
+  outline: none;
+}
+.form.error input {
+  border-color: var(--error-color);
+}
+.form.success input {
+  border-color: var(--success-color);
+}
+.form small {
+  color: var(--error-color);
+  font-size: 1.3rem;
+  margin: 0 auto;
+  padding: 1em 0;
 }
 .form input::placeholder {
   color: hsl(223, 100%, 88%);
   font-family: 'Libre Franklin', sans-serif;
 }
-.form input .error {
-  color: hsl(354, 100%, 66%);
-  font-size: 1.3rem;
-  margin: 0 auto;
-}
-.form input .success {
-  color: hsl(223, 100%, 66%);
-  font-size: 1.3rem;
-  margin: 0 auto;
+.form input,
+.form button {
+  width: 20em;
 }
 .form button {
   color: #fff;

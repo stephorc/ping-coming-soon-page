@@ -45,33 +45,6 @@ const validateInputs = () => {
   }
 }
 
-function validateEmail() {
-  let addDiv = document.createElement('div');
-  addDiv.innerText = 'Yo.'
-
-  let susDiv = document.createElement('div');
-  susDiv.innerText = 'oh nooo'
-
-  if (email.value === '') {
-    form.appendChild(addDiv);
-  } else {
-    form.appendChild(susDiv);
-  }
-}
-
-// function validateEmail() {
-//   validateInputs();
-//  }
-
-// if (email.value = '') {
-//   addErrorDiv.innerText = message;
-//   form.appendChild(addErrorDiv);
-// } else {
-//   let message2 = 'Success!'
-//   addSuccessDiv.innerText = message2;
-//   form.appendChild(addErrorDiv);
-// }
-
 
 // Submit their email address using an `input` field:
 // Receive an error message when the `form` is submitted if:
