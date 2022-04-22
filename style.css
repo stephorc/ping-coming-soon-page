@@ -115,12 +115,13 @@ main { margin: .5em 2em; }
   margin-bottom: .7em;
 }
 .form input:focus {
-  outline: none;
+  outline: .2rem solid hsl(223, 87%, 63%);
+  box-shadow: .6rem .6rem 1rem rgba(113, 124, 151, 0.4);
 }
-.form.error input {
+.form input.error {
   border-color: var(--error-color);
 }
-.form.success input {
+.form input.success {
   border-color: var(--success-color);
 }
 .form small {

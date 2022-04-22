@@ -47,6 +47,7 @@ Users should be able to:
 ### Built with
 
 - Semantic & Non-semantic HTML5 markup
+- CSS custom properties
 - CSS Flexbox
 - CSS Grid
 - Vanilla JS (form validation)
