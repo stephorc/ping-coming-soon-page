@@ -58,7 +58,7 @@ Users should be able to:
 
 ### What I learned
 
-This project reinforced my understanding of flex, grid, positioning w/ z-index, sizing w/ media queries, and JS form validation (how to work with ids, onclick, and functions to authenticate information and/or create new divs inside of divs).
+This project reinforced my understanding of flex, grid, positioning w/ z-index, sizing w/ media queries, and JS form validation (how to work with ids and functions to authenticate information and/or create new divs inside of divs).
 
 <!-- To see how you can add code snippets, see below:
 
@@ -82,10 +82,10 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 I'd like to continue focusing on form validation using JavaScript, in future projects.
 
-<!-- ### Useful resources
+### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+- [Stackoverflow, reference error solution](https://stackoverflow.com/questions/70401866/how-to-fix-referenceerror-validateemail-is-not-defined) - This helped me figure out that I miss-labeled a function.
+- [MDN, HTML form tag attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#attr-novalidate) - This article helped me override HTML5 form validation, so that I could practice my JS skills. I'd recommend MDN to every web dev, new and old.
 
 ## Author
 
